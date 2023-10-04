@@ -10,14 +10,14 @@ body {
 h2 {
     font-size: 24px;
     text-transform: uppercase;
-    color: #525252;
+    color: #000000;
     font-weight: 600;
     margin-bottom: 30px;
 }
 h4 {
     font-size: 19px;
     line-height: 1.375em;
-    color: #525252;
+    color: #000000;
     font-weight: 400;
     margin-bottom: 30px;
 }
@@ -105,6 +105,7 @@ h4 {
     margin: 15px 0;
     background-color: #ff0062;
     color: #fff;
+
 }
 navbar {
     margin-bottom: 0;
@@ -168,7 +169,7 @@ navbar li a, .navbar .navbar-brand {
 footer .glyphicon {
     font-size: 20px;
     margin-bottom: 20px;
-    color: #ff0062(208 13% 53%);
+    color: #868686(208 13% 53%);
 }
 .slieamim {visibility: hidden;}
     .slide {
@@ -177,41 +178,42 @@ animation-name:slide;
 animation-duration: 1s;
 visibility: visible;
 }
-@Keyfraes slide {
+@keyframes slide {
     0% {
-        opacity: 0;
-        transform: translaterY(70%);
-    }
+      opacity: 0;
+      transform: translateY(70%);
+    } 
     100% {
-        opacity: 1;
-        transform: translaterY(0%);
-    }@-webkit-keyframes slide {
-        0% {
-            opacity: 0;
-      webkit-transform: translateY(70);
-        }
+      opacity: 1;
+      transform: translateY(0%);
     }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
     100% {
-        opacity: 1;
-        -webkit-transform: translateY(0%);
+      opacity: 1;
+      -webkit-transform: translateY(0%);
     }
-}
-@media screen and (max-hidth: 768px) {
+  }
+  @media screen and (max-width: 768px) {
     .col-sm-4 {
-        text-align: center;
-        margin: 25px 0;
+      text-align: center;
+      margin: 25px 0;
     }
     .btn-lg {
-        width: 100%; 
-        margin-bottom: 35px;
-    }
+      width: 100%;
+      margin
+}
 }
 @media screen and (max-width: 480px) {
     .logo {
-        font-size: 150px;
+      font-size: 150px;
     }
-}
+  }
 
 .btnAcessar{
-    background-color: #ff64a0;
+    background-color: #ff0062;
 }
