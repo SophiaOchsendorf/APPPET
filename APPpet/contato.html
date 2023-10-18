@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang ="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>SWGVPMJ-Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+            </script>
+            <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body id="topo" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+
+        <nav class="navbar navbar-defalt navbar -fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <buttom type="buttom" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </buttom>
+                    <a class="navbar-brand" href="#mypage">SWGV</a>
+                </div>
+                <div class="collapse navbar-collapse"id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="sobre.html" style="color:#ff0062" >SOBRE</a></li>
+                        <li><a href="contato.html" style="color:#ff0062" >CONTATO</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron text-center">
+            <h1>SWGV</h1>
+            <p>Software Web de Gestão Veicular</p>
+        </div>
+
+
+
+       
+        <div class="container a container-fluid">
+
+            <h2>Nos Envie um Email</h2>
+            <div id="mensagem" class="alert text-center" role="alert">
+
+            </div>
+
+            <form id="form-contato" method="Post" action="">
+                <div class="row">
+                    <div class="col-sm-12 slideanim">
+
+                        <div class="row slide">
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="nome" name="nome" placeholder="None" type="text" required>
+                            </div>
+
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                            </div>
+                        </div>
+
+                        <div class="row slide">
+                            <div class="col-sm-12 form-group">
+                                <input class="form-control" id="assunto" name="assunto" placeholder="Assunto" type="text" required>
+                             </div>
+
+                             <div class="col-sm-12 form-group">
+                                <textarea class="form-control" id="texto" name="texto" placeholder="Escreva aqui..." rows="5"></textarea><br>
+                             </div>
+                     </div>
+
+                     <div class="col-sm-12 form-group slide">
+                        <button class="btn btn-defalt pull-right" id="btnEnviar" type="submit">Enviar</button>
+                     </div>
+
+                </div>
+            </form>
+
+            <br>
+            <br>
+
+        </div>
+
+        <!--Container (Contact Section)-->
+
+        <div id="contact" class="container-fluid bg-grey">
+            <h2 class="text-center">CONTATO</h2>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p style="text-align: justify;">Software Desenvolvido para gestão de consultas veterinárias</p>
+                    <div class="col-sm-4">
+                        <p><span class="glyphicon glyphicon-map-marker"></span> Rio de Janeiro, RJ</p>
+                        <p><span class="glyphicon glyphicon-phone"></span> +55 21999999999</p>
+                        <p><span class="glyphicon glyphicon-envelope"></span> contato@apppet.com.br<object data="tograma" type=""></object></p>
+                </div>
+            </div>
+        </div>
+
+        <!--Image of location/map--><img src="img/img-login.jpg" class="w3-image w3-greyscale-min"
+        style="width:100%">
+
+        <footer class="container-fluid text-center">
+            <a href="#topo" title="To Top">
+                <span style="color:#ff0062" class="glyphicon glyphicon-chevron-up"></span>
+            </a>
+
+            <p>Bootstrap Tema Desenvolvido por <a href="" title="Visite"
+                style="color:#ff0062" target="_blank">Sophia Balbino Ochsendorf</a></p>
+        </footer>
+
+        <script src="js/contato.js" charset="utf-8"></script>
+
+    </body>
+</html>
