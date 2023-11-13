@@ -1,7 +1,7 @@
-//<?php
-//header("Access-Control-Allow-Origin", "*");
-//header("Access-Control-Allow-Methods", 'GET, PUT, POST, DELETE');
-//?>
+<?php
+header("Access-Control-Allow-Origin", "*");
+header("Access-Control-Allow-Methods", 'GET, PUT, POST, DELETE');
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>

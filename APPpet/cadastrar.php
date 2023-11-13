@@ -1,10 +1,10 @@
 <?php
 header('Access-Control-Allow-Origin: *');
 //session_start();
-/*if(!empty($_SESSION['id'])){
-}else{
-  header("Location: login.php");  
-}*/
+//if(!empty($_SESSION['id'])){
+//}else{
+  //header("Location: login.php");  
+//}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

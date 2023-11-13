@@ -40,7 +40,7 @@ if(empty($nome) || empty($email) || empty($usuario) || empty($senha)){
             return json_encode('3');
             //$_SESSION['magcad'] = "usuário cadastrado com successo";
             //echo"Usuário cadastrado com successo /n senha" . senha;
-            ;;header("location: login.php");
+           //;;header("location: login.php");
         }else{
 
             return json_encode('2');
