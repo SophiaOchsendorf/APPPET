@@ -9,6 +9,7 @@ include_once 'conexao.php';
 
 
 $nome = $_POST["nome"];
+$cpf = $_POST["cpf"];
 $email = $_POST["email"];
 $usuario = $_POST["usuario"];
 $s = $_POST["senha"];
@@ -16,7 +17,7 @@ $senha = password_hash($s, PASSWORD_DEFALT);
 
 //$senha = $_POST["senha"];//password_hash($dados['senha'], PASSWORD_DEFAULT);
 
-if(empty($nome) || empty($email) || empty($usuario) || empty($senha)){
+if(empty($cpf) ||empty($nome) || empty($email) || empty($usuario) || empty($senha)){
 
     //echo(1);
 
@@ -27,9 +28,10 @@ if(empty($nome) || empty($email) || empty($usuario) || empty($senha)){
 
 
 
-    $result_usuario = "INSERT INTO usuarios (nome, email, usuario, senha) VALUES (
+    $result_usuario = "INSERT INTO usuarios (nome, cpf, email, usuario, senha) VALUES (
 
         '" .$nome. "',
+        '" .$cpf. "',
         '" .$email. "',
         '" .$usuario. "',
         '" .$senha. "'

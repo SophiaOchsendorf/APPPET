@@ -251,7 +251,7 @@ if(!isset($_SESSION)){
                             </div>
 
                             <div class="col-lg-6 col-md-6 col-xs-12">
-                                <label for="fname">1ª Habilitação</label
+                                <label for="fname">1ª Habilitação</label>
                                 <input type="" id="dataprimeiracenh" name="dataprimeiracnh" class="dataprimeiracnh form-control tamanho-form" placeholder="dd/mm/aaaa" required>
                             </div>
 
@@ -272,8 +272,23 @@ if(!isset($_SESSION)){
                             onclick="editadorDadosUsuário()"type="button"
 
                             onclick="limpar()" class="button3 btn btn-defalt"
-                            data-dismiss="modal">Cancelar</button
-                            <button id=""
+                            data-dismiss="modal">Editar</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div id ="mensagem2" class="alert text-center textWhite" role="alert"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+</br>
+
+
 
         
         
