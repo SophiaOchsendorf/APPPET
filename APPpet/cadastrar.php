@@ -1,10 +1,13 @@
 <?php
 header('Access-Control-Allow-Origin: *');
-//session_start();
-//if(!empty($_SESSION['id'])){
-//}else{
-  //header("Location: login.php");  
-//}
+header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
+ini_set('display_errors', 0 );
+error_reporting(0);
+/*if(!isset($_SESSION)){
+  session_start();   
+}else{
+  header("Location: login.php");
+}*/
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -19,7 +22,7 @@ header('Access-Control-Allow-Origin: *');
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
 <link href="style.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <script src="https://kit.fontawesome.com/a076d05399.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" integrity="sha512-xgIrH5DRuEOcZK5cPtVXx/WSp5DTir2JNcKE5ahV2u51NCTD9UDxbQgZHYHVBlPc4H8tug6BZTYIl2RdA/X0Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
 </head>
 <body id="topo" data-spy="scroll" data-target=".navbar" data-offset="60">

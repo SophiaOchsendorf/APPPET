@@ -3,7 +3,9 @@ function cadastrar(form) {
     var form = $("#form-cadastrar").serialize();
     console.log(form);
 
-/*
+    //alert("Hello! I am an alert box!");
+
+
     $.ajax({
 
         url: 'cadastrar2.php',
@@ -18,6 +20,7 @@ function cadastrar(form) {
             if(e=='3'){
 
                 console.log('3');
+                  alert("3");
                 alert('alert btn-success text-center', 'Sucesso!');
             }
 
@@ -30,7 +33,7 @@ function cadastrar(form) {
     });
 
     limpar();
-    */
+    
 }
 
 function limpar(){
