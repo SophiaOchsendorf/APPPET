@@ -19,26 +19,31 @@ function cadastrar(form) {
 
             if(e=='3'){
 
-                console.log('3');
-                  alert("3");
-                alert('alert btn-success text-center', 'Sucesso!');
+                //console.log('3');
+                  //alert("3");
+                setTextoToNoAlert('alert btn-success','Sucesso!');
+                setTimeout("limpar()", 10000);
             }
 
             else {
 
-                console.log('2');
-                alert('alert btn-danger text-center', 'Erro no Cadastro!');
+                //console.log('2');
+                setTextoToNoAlert('alert btn-danger', 'Erro no Cadastro!');
+                setTimeout("limpar()", 10000);
             }
         }
     });
 
-    limpar();
-    
+
 }
 
-function limpar(){
+function limpar() {
     console.log("limpei");
     document.getElementById("form-cadastrar").reset();
 
+}
+function setTextoNoAlert(classe, message) {
+    $('.alert').attr('class', classe);
+    $('#mensagem').text(message);
 }
 

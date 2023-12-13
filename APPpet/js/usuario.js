@@ -255,5 +255,197 @@ $(document).ready(function(){
     });
     })
     
-    
+
+    //Atualizar dados do usuário da tela do usuário
+    function editarDadosUsuario (form) {
+       console.log("aqui Editar Dados Do Usuário") ;
+       var form = $("#form-Editar").serialize();
+
+
+       if ($('#ativoInativo').is('checked')){
+        console.log("INATIVAR");
+        ativoInativo="INATIVAR";
+       }
+
+
+       console.log (form + '&id=' + idEditar + '&ativoInativo=' + '');
+
+
+    $.ajax({
+         type ='POST',//método
+         url: 'editarDadosUsuario.php',
+         cache: false,
+         data: form + '&id=' + idEditar,
+
+
+
+         success:function (d) {
+            console.log("entrei no ajax");
+            console.log (d);
+            if(d=='3') {
+
+        
+
+
+            //console.log('3');
+            setTextToNoAlert('alert btn success text-center text-white textWhite', 'Sucesso ao Editar!');
+            setTimeout("limpar()",6000);
+            setTimeout("window.location.href='usuario.php'", 7000);
+            }
+
+         if(d=='2' || d=='1'){
+
+            //console.log('2');
+            setTextToNoAlert('alert btn-danger text-center text-white textWhite', 'Erro ao Editar!');
+            setTimeout("limpar()", 9000);
+            setTimeout("window.location.href='usuario.php'", 10000);
+         }
+        }
+
+    });
+
+}
+
+
+//fim do atualizar dados do usuário
+
+function limpar() {
+    console.log("limpei cadastrar");
+    document.getElementById("form-cadastrar").reset () ;
+    document.getElementById("form-editar").reset () ;
+    document.getElementById("ativoInativo").checked = false;
+    //$('#mensagem'),text("");
+    const divSalvar = $("#mensagem");
+    divSalvar.empty();
+    const divSalvar = $("#mensagem2");
+    divSalvar.empty();
+}
+
+
+//mensagem cadastro e editar
+function setTextoToNoAlert(classe, message) {
+    $('.alert').attr('class', classe);
+    $('#mensagem').text(message);
+    $('#mensagem2').text(message);
+}
+
+
+
+function modalSucesso(){
+    $("#myModalSucesso").modal();
+}
+
+//modalSucesso();
+function modalErro(){
+    $("#myModalErro").modal
+}
+//modalErro();
+
+//Preenchimento automatico ao inserir o CEP
+function limpa_formulário_cep() {
+    //limpa vamores do formulário de cep.
+    document.getElementById('rua').value=("");
+    document.getElementById('bairro').value=("");
+    document.getElementById('cidade').value=("");
+    document.getElementById('uf').value=("");
+    document.getElementById('ibge').value=("");
+}
+
+function meu_callback(conteudo) {
+    if (!("erro" in conteudo)) {
+        //Atualiza os cammpos com os valores.
+    }  //end if.
+
+    else {
+
+        //CEP não encontradoM
+        limpa_formulario_cep ();
+        alert("CEP não encontrado.");//arrumar a mensagem
+    }
+}
+
+
+function pesquisacep(valor) {
+
+    //nova variável "cep" somente com dígitos.
+    var cep = valor.replace(/\D/g, '').
+
+
+ //Verifica se campo cep possui valor informado.
+    if (cep !="") {
+
+     //Expressão regular para validar o CEP.
+     var validacep = /^[0-9]{8}$/;
+
+     //valida o formato do cep.
+     if(validacep.test(cep)) {
+
+        //preenche os campos com "..." enquanto consulta webservice.
+        document.getElemenrById('rua').value="...";
+        document.getElemenrById('bairro').value="...";
+        document.getElemenrById('cidade').value="...";
+        document.getElemenrById('uf').value="...";
+
+        //Cria um elemento javascript.
+        var script = document.createElement('script');
+
+        //Sincroniza com o callback.
+        script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+
+        //Insere script no documento e carrega o conteúdo.
+        document.body.appendChild(script);
+     } //end if.
+
+     else{
+        //cep é inválido.
+        limpa_formulário_cep();
+        alert("Formato de CEP inválido.");//arrumar a menssagem 
+     }
+    } //end if.
+     else {
+
+     //cep sem valor, limpa formulário.
+     limpa_formulário_cep();
+    }
+};
+
+//Fim CEP
+
+
+$(document).ready(function(){
+    //Add smooth scrolling to all links in navbar + footer link
+    $(".navbar a, footer a[href='#topo']").on('click', function(event) {
+        //make sure this.hash has a value before overriding defalt behavior
+        if (this.hash !=="") {
+            //Prevent defalt anchor click behavior
+            event.preventDefalt();
+
+            //Store hash
+            var hash = this.hash;
+
+            //Using jQuery's animate() method to add smooth page scroll
+
+            //The optional number(900) specifies the number of milliseconds it takes to scroll to te specified area
+
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 900, function(){
+
+                //Add hash (#) to URL when done scrolling (defalt click behavior)
+                window.location.hash = hash;
+            });
+         } // End if 
+    });
+
+    $(window).scroll(function() {
+        $(".slideanim").each(function() {
+            var pos = $(this).offset().top;
+
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+                $(this).addClass("slide");
+            }
+        });
+    });
+})
     
