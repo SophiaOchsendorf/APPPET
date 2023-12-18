@@ -1,6 +1,6 @@
 <?php
 header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
+header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
 header('Content-Type: application/json');
 header('Character-Encoding: utf-8');
 header('Content-Type: application/json; charset=utf-8');

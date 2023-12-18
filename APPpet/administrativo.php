@@ -111,7 +111,7 @@ if(!isset($_SESSION)){
 
 <p><span class="glyphicon glyphicon-map-marker"></span> Rio de Janeiro, RJ</p>
                         <p><span class="glyphicon glyphicon-phone"></span> +55 21999999999</p>
-                        <p><span class="glyphicon glyphicon-envelope"></span> contato@apppet.com.br<object data="tograma" type=""></object></p>
+                        <p><span class="glyphicon glyphicon-envelope"></span> contato@apppet.com.br</p>
 
 </div>
 
