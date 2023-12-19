@@ -108,7 +108,7 @@ if(!isset($_SESSION)){
             <div class="col-lg-12">
                 <button style='margin-left: 2.0em; margin-right: 100px; margin-top: 20px; margin-bottom: 20px; background-color: #224f77; color: #fff;'
                 id="novo_cadastro" type="button" onclick="limpar()"
-                class="button2 btn btn-lg buttonCadNovo" data-target="#modalcadastrar" data-toggle="modal">Cadastrar Novo</button>
+                class="button2 btn btn-lg buttonCadNovo" data-target="#modalCadastrar" data-toggle="modal">Cadastrar Novo</button>
             </div>
         </div>
 
@@ -144,98 +144,95 @@ if(!isset($_SESSION)){
                         <h4 class="modal-title"><b>Cadastrar Pet</b></h4>
                     </div>
 
-                    <form id="form-cadastrar" method="POST" action=""
-                    class="form-inline col-12 tamanho-form">
+                    <form id="form-cadastrar" method="POST" action="" class="form-inline col-12 tamanho-form">
                     <div class="modal-body">
                         <div class="form-group col-12">
                             <div class="row">
 
 
-                            <div class="col-lg-8 col-md-8 col-xs-12">
-                                <label for="fname">Nome</label>
-                                <input type="text" name="nome" class="nome form-control tamanho-form" placeholder="" required>
-                            </div>
+                           
+                               <div class="col-lg-7 col-md-7 col-xs-12">
+                                     <label for="fname">Nome</label>
+                                     <input type="text" name="nome" class="nome form-control tamanho-form" placeholder="" required>
+                                </div>
 
-                            <div class="col-lg-4 col-md-4 col-xs-12">
-                                <label for="fname">Raça</label>
-                                <input type="date" name="raca"
-                                class="raca form-control tamanho-form tamanho-form"
-                                placeholder="" required>
-                            </div>
+                                <div class="col-lg-5 col-md-5 col-xs-12">
+                                     <label for="fname">Raça</label>
+                                     <input type="text" name="raca"
+                                     class="raca form-control tamanho-form tamanho-form"
+                                     placeholder="" required>
+                                </div>
 
-                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                <label for="fname">Espécie</label>
-                                <input type="text" id="especie" name="especie" class="especie form-control tamanho-form" placeholder="" required> 
-                            </div>
+                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                     <label for="fname">Espécie</label>
+                                     <input type="text" id="especie" name="especie" class="especie form-control tamanho-form" placeholder="" required> 
+                                </div>
 
 
-                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                <label for="fname">Sexo</label>
-                                <input type="text" name="sexo" class="sexo form-control tamanho-form" placeholder="" required>
-                            </div>
+                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                     <label for="fname">Sexo</label>
+                                     <input type="text" name="sexo" class="sexo form-control tamanho-form" placeholder="" required>
+                                </div>
 
-                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                <label for="fname">Data de Nascimento</label>
-                                <input type="text" name="datadenascimento" class="datadenascimento form-control tamanho-form" placeholder="" required>
-                            </div>
+                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                     <label for="fname">Data de Nascimento</label>
+                                     <input type="text" name="datadenascimento" class="datadenascimento form-control tamanho-form" placeholder="" required>
+                                </div>
 
-                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                <label for="fname">Pelagem</label>
-                                <input type="text" name="pelagem" class="pelagem form-control tamanho-form" placeholder="" >
-                            </div>
+                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                     <label for="fname">Pelagem</label>
+                                     <input type="text" name="pelagem" class="pelagem form-control tamanho-form" placeholder="" >
+                                 </div>
 
-                            <div class="col-lg-4 col-md-4 col-xs-12">
-                                <label for="fname">Micro Chip</label>
-                                <input type="text" name="microchip" class="microchip form-control tamanho-form" placeholder="" >
-                            </div>
+                                 <div class="col-lg-4 col-md-4 col-xs-12">
+                                     <label for="fname">Micro Chip</label>
+                                     <input type="text" name="microchip" class="microchip form-control tamanho-form" placeholder="" >
+                                </div>
 
-                            <div class="col-lg-4 col-md-4 col-xs-12">
-                                <label for="fname">Tutor</label>
-                                <input type="text" name="tutor" class="tutor form-control tamanho-form" placeholder="" required>
-                            </div>
+                                <div class="col-lg-4 col-md-4 col-xs-12">
+                                     <label for="fname">Tutor</label>
+                                     <input type="text" name="tutor" class="tutor form-control tamanho-form" placeholder="" required>
+                                </div>
 
-                            <div class="col-lg-4 col-md-4 col-xs-12">
-                                <label for="fname">CPF</label>
-                                <input type="text" name="cpf" class="cpf form-control tamanho-form" placeholder="" required>
-                            </div>
+                                <div class="col-lg-4 col-md-4 col-xs-12">
+                                     <label for="fname">CPF</label>
+                                     <input type="text" name="cpf" class="cpf form-control tamanho-form" placeholder="" required>
+                                </div>
 
-                            <div class="col-lg-12 col-md-12 col-xs-12">
-                                <br>
-                                <input type="checkbox" id="ativoInativo" name="ativoInativo" value="INATIVAR">
-                                <label for="ativoInativo"> Inativar Usuário </label><br>
-                            </div>
+                                <div class="col-lg-12 col-md-12 col-xs-12">
+                                     <br>
+                                     <input type="checkbox" id="ativoInativo" name="ativoInativo" value="INATIVAR">
+                                     <label for="ativoInativo"> Inativar Usuário </label><br>
+                                </div>
 
-                            <div class="col-lg-12 col-md-12 col-xs-12">
-                    <label for="fname">Observações</label>
-                    <textarea type="text" id="Observacao" name="Observacao" class="Observacao form-control tamanho-form" placeholder="" value="..."  required></textarea>
-                  </div>  
+                             <div class="col-lg-12 col-md-12 col-xs-12">
+                                 <label for="fname">Observações</label>
+                                 <textarea type="text" id="Observacao" name="Observacao" class="Observacao form-control tamanho-form" placeholder="" value="..."  required></textarea>
+                             </div>  
 
 
 
                             
 
                            
-                </div>
-                <div class="row">
-                    <div class="modal-footer">
-                        <div class="col-lg-12">
-                            <button id="excluir" onclick="" type="button" class="button4 btn btn-danger">Excluir</button>
-                            <button type="button" onclick="" class="button3 btn btn-defalt"
-                            data-dismiss="modal">Cancelar</button>
-                            <button id="editar"
-                            onclick="editadorDadosUsuário()"type="button"
-
-                            onclick="limpar()" class="button3 btn btn-defalt"
-                            data-dismiss="modal">Editar</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div id ="mensagem2" class="alert text-center textWhite" role="alert"> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </form>
+                            </div>
+                            <div class="row">
+                                <div class="modal-footer">
+                                  <div class="col-lg-12">
+                                      <button id="excluir" onclick="" type="button" class="button4 btn btn-danger">Excluir</button>
+                                      <button type="button" onclick="" class="button3 btn btn-defalt"
+                                      data-dismiss="modal">Cancelar</button>
+                                      <button id="editar"
+                                      onclick="editadorDadosUsuário()"type="button"onclick="limpar()" class="button3 btn btn-defalt"data-dismiss="modal">Editar</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                   <div id ="mensagem2" class="alert text-center textWhite" role="alert"> </div>
+                                </div>
+                                </div>
+                            </div>
+                     </div>
+                     </form>
     </div>
   </div>
 </div>
